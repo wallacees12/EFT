@@ -9,9 +9,9 @@ Supervised by Roberto Pellerito, Nikola Zubić, and Prof. Dr. Davide Scaramuzza
 ---
 
 <p align="center">
-  <img src="RapidHead_L12_EFT8.gif" alt="Linear interpolation vs EFT on rapid head rotation" width="700"/>
+  <img src="event_on_mesh.gif" alt="Event camera data projected onto 3D FLAME face mesh" width="500"/>
   <br>
-  <em>Linear interpolation (top) vs EFT (bottom) on rapid side-to-side head rotation at stride 8. EFT reduces FAN landmark error by 31% on this sequence.</em>
+  <em>Event camera data (red = positive, blue = negative polarity) projected onto the reconstructed FLAME 3D face mesh. EFT uses this signal to track facial motion at microsecond resolution between RGB keyframes.</em>
 </p>
 
 ---
