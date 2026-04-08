@@ -9,9 +9,9 @@ Supervised by Roberto Pellerito, Nikola Zubić, and Prof. Dr. Davide Scaramuzza
 ---
 
 <p align="center">
-  <img src="teaser.gif" alt="Linear interpolation vs EFT" width="600"/>
+  <img src="subjects_overview.gif" alt="EFT results across all subjects" width="700"/>
   <br>
-  <em>Linear interpolation (top) vs EFT (bottom) at 8× temporal resolution. EFT recovers non-linear facial dynamics between RGB keyframes using event camera data.</em>
+  <em>EFT results across all 8 sequences. Event camera data drives high-temporal-resolution FLAME mesh fitting between RGB keyframes.</em>
 </p>
 
 ---
@@ -52,7 +52,9 @@ RGB Frames + Event Stream
                                           (+ optional Contrast Maximisation)
 ```
 
-## Key Results
+---
+
+## Results
 
 | Method | Mean FAN error (px) ↓ |
 |--------|----------------------|
@@ -60,6 +62,64 @@ RGB Frames + Event Stream
 | Linear interpolation | 4.31 |
 | **EFT (ours)** | **3.97** |
 | EFT + Contrast Maximisation | 4.12 |
+
+FAN (Face Alignment Network) landmarks used as an independent evaluator on 256×256 rendered mesh overlays.
+
+---
+
+## Qualitative Results
+
+Each pair below shows **linear interpolation (top)** vs **EFT (bottom)** at stride 8 (7 reconstructed meshes between every pair of RGB keyframes).
+
+### Standard Sequences
+
+<table>
+  <tr>
+    <td align="center"><b>S1 — Neutral</b></td>
+    <td align="center"><b>S2 — Alessandro</b></td>
+  </tr>
+  <tr>
+    <td><img src="4_L12_EFT8.gif" width="340"/></td>
+    <td><img src="Alessandro_L12_EFT8.gif" width="340"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>S3 — Blink</b></td>
+    <td align="center"><b>S4 — Mouth</b></td>
+  </tr>
+  <tr>
+    <td><img src="Blink_L12_EFT8.gif" width="340"/></td>
+    <td><img src="Mouth_L12_EFT8.gif" width="340"/></td>
+  </tr>
+</table>
+
+### Rapid Motion Sequences
+
+<table>
+  <tr>
+    <td align="center"><b>R1 — Rapid Blink</b></td>
+    <td align="center"><b>R2 — Rapid Head</b></td>
+  </tr>
+  <tr>
+    <td><img src="RapidBlink_L12_EFT8.gif" width="340"/></td>
+    <td><img src="RapidHead_L12_EFT8.gif" width="340"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>R3 — Rapid Mouth Diagonal</b></td>
+    <td align="center"><b>R4 — Rapid Mouth Vertical</b></td>
+  </tr>
+  <tr>
+    <td><img src="RapidMouthDiag_L12_EFT8.gif" width="340"/></td>
+    <td><img src="RapidMouthVert_L12_EFT8.gif" width="340"/></td>
+  </tr>
+</table>
+
+### Contrast Maximisation
+
+<p align="center">
+  <img src="Mouth_EFT_vs_CMonly.gif" width="500"/>
+  <br>
+  <em>EFT (left) vs CM-only (right) — fitting FLAME expression purely from event-based IWE variance, without any landmark supervision.</em>
+</p>
 
 ---
 
