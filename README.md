@@ -9,9 +9,9 @@ Supervised by Roberto Pellerito, Nikola Zubić, and Prof. Dr. Davide Scaramuzza
 ---
 
 <p align="center">
-  <img src="subjects_overview.gif" alt="EFT results across all subjects" width="700"/>
+  <img src="RapidHead_L12_EFT8.gif" alt="Linear interpolation vs EFT on rapid head rotation" width="700"/>
   <br>
-  <em>EFT results across all 8 sequences. Event camera data drives high-temporal-resolution FLAME mesh fitting between RGB keyframes.</em>
+  <em>Linear interpolation (top) vs EFT (bottom) on rapid side-to-side head rotation at stride 8. EFT reduces FAN landmark error by 31% on this sequence.</em>
 </p>
 
 ---
@@ -70,6 +70,12 @@ FAN (Face Alignment Network) landmarks used as an independent evaluator on 256×
 ## Qualitative Results
 
 Each pair below shows **linear interpolation (top)** vs **EFT (bottom)** at stride 8 (7 reconstructed meshes between every pair of RGB keyframes).
+
+<p align="center">
+  <img src="subjects_overview.gif" alt="Overview of all 8 evaluation sequences" width="700"/>
+  <br>
+  <em>Overview of the 8 evaluation sequences: S1–S4 (standard motions) and R1–R4 (rapid motions).</em>
+</p>
 
 ### Standard Sequences
 
