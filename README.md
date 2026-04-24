@@ -6,10 +6,12 @@
 
 Supervised by Roberto Pellerito, Nikola Zubić, and Prof. Dr. Davide Scaramuzza
 
+**Submitted to BMVC 2026 — under review**
+
 ---
 
 <p align="center">
-  <img src="event_on_mesh.gif" alt="Event camera data projected onto 3D FLAME face mesh" width="500"/>
+  <img src="gif/event_on_mesh.gif" alt="Event camera data projected onto 3D FLAME face mesh" width="500"/>
   <br>
   <em>Event camera data (red = positive, blue = negative polarity) projected onto the reconstructed FLAME 3D face mesh. EFT uses this signal to track facial motion at microsecond resolution between RGB keyframes.</em>
 </p>
@@ -33,7 +35,7 @@ Our results establish event cameras as a viable sensing modality for high-tempor
 
 ## Thesis
 
-**[Wallace_EFT_MScThesis_2026.pdf](Wallace_EFT_MScThesis_2026.pdf)**
+**[Event_Based_Facial_Tracking_Report.pdf](Event_Based_Facial_Tracking_Report.pdf)**
 
 ---
 
@@ -72,7 +74,7 @@ FAN (Face Alignment Network) landmarks used as an independent evaluator on 256×
 Each pair below shows **linear interpolation (top)** vs **EFT (bottom)** at stride 8 (7 reconstructed meshes between every pair of RGB keyframes).
 
 <p align="center">
-  <img src="subjects_overview.gif" alt="Overview of all 8 evaluation sequences" width="700"/>
+  <img src="gif/subjects_overview.gif" alt="Overview of all 8 evaluation sequences" width="700"/>
   <br>
   <em>Overview of the 8 evaluation sequences: S1–S4 (standard motions) and R1–R4 (rapid motions).</em>
 </p>
@@ -85,16 +87,16 @@ Each pair below shows **linear interpolation (top)** vs **EFT (bottom)** at stri
     <td align="center"><b>S2 — Alessandro</b></td>
   </tr>
   <tr>
-    <td><img src="4_L12_EFT8.gif" width="340"/></td>
-    <td><img src="Alessandro_L12_EFT8.gif" width="340"/></td>
+    <td><img src="gif/4_L12_EFT8.gif" width="340"/></td>
+    <td><img src="gif/Alessandro_L12_EFT8.gif" width="340"/></td>
   </tr>
   <tr>
     <td align="center"><b>S3 — Blink</b></td>
     <td align="center"><b>S4 — Mouth</b></td>
   </tr>
   <tr>
-    <td><img src="Blink_L12_EFT8.gif" width="340"/></td>
-    <td><img src="Mouth_L12_EFT8.gif" width="340"/></td>
+    <td><img src="gif/Blink_L12_EFT8.gif" width="340"/></td>
+    <td><img src="gif/Mouth_L12_EFT8.gif" width="340"/></td>
   </tr>
 </table>
 
@@ -106,23 +108,23 @@ Each pair below shows **linear interpolation (top)** vs **EFT (bottom)** at stri
     <td align="center"><b>R2 — Rapid Head</b></td>
   </tr>
   <tr>
-    <td><img src="RapidBlink_L12_EFT8.gif" width="340"/></td>
-    <td><img src="RapidHead_L12_EFT8.gif" width="340"/></td>
+    <td><img src="gif/RapidBlink_L12_EFT8.gif" width="340"/></td>
+    <td><img src="gif/RapidHead_L12_EFT8.gif" width="340"/></td>
   </tr>
   <tr>
     <td align="center"><b>R3 — Rapid Mouth Diagonal</b></td>
     <td align="center"><b>R4 — Rapid Mouth Vertical</b></td>
   </tr>
   <tr>
-    <td><img src="RapidMouthDiag_L12_EFT8.gif" width="340"/></td>
-    <td><img src="RapidMouthVert_L12_EFT8.gif" width="340"/></td>
+    <td><img src="gif/RapidMouthDiag_L12_EFT8.gif" width="340"/></td>
+    <td><img src="gif/RapidMouthVert_L12_EFT8.gif" width="340"/></td>
   </tr>
 </table>
 
 ### Contrast Maximisation
 
 <p align="center">
-  <img src="Mouth_EFT_vs_CMonly.gif" width="500"/>
+  <img src="gif/Mouth_EFT_vs_CMonly.gif" width="500"/>
   <br>
   <em>EFT (left) vs CM-only (right) — fitting FLAME expression purely from event-based IWE variance, without any landmark supervision.</em>
 </p>
@@ -135,7 +137,9 @@ The implementation code is maintained in a separate repository. Availability sub
 
 ---
 
-## Citation
+## How to Cite
+
+If you use this work, please cite the MSc thesis:
 
 ```bibtex
 @mastersthesis{wallace2026eft,
@@ -146,6 +150,8 @@ The implementation code is maintained in a separate repository. Availability sub
   month     = {March},
 }
 ```
+
+A BMVC 2026 paper based on this work is currently under review — citation will be updated here upon acceptance.
 
 ---
 
